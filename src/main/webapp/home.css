@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #B3E5FC; /* Pool color for body */
+    height: 100vh;
+    overflow: hidden; /* Prevent vertical scrolling of the body */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7B1B1; /* Peony color for navbar */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Keep navbar stable at the top */
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #8A2BE2;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.action-button {
+    padding: 10px 15px;
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.action-button:hover {
+    background-color: #FF4C3B;
+}
+
+/* Side menu styling */
+.menu-wrapper {
+    position: relative;
+}
+
+.side-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Show side menu on hover or click */
+.menu-wrapper:hover .side-menu,
+.menu-wrapper .side-menu.active {
+    display: flex;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.profile { background-color: #4CAF50; }
+.update { background-color: #2196F3; }
+.delete { background-color: #F44336; }
+.logout { background-color: #FF9800; }
+
+.menu-item:hover {
+    opacity: 0.8;
+}
+
+.content {
+    display: flex;
+    margin: 20px;
+    height: calc(90vh - 100px);
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+    color: #4B0082;
+    border-radius: 8px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.bank-name {
+    font-size: 48px; /* Adjust font size as needed */
+    color: #4B0082; /* Change color if necessary */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Marquee styling at the bottom */
+.marquee {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #FF6F61;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marqueeScroll 30s linear infinite;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Marquee scroll animation */
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
